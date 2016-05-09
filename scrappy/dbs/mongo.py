@@ -1,4 +1,4 @@
-#coding:utf8
+# coding:utf8
 __author__ = 'modm'
 from pymongo import MongoClient, errors, DESCENDING
 import datetime
@@ -8,7 +8,7 @@ from scrapy.utils import project
 class MongoDBClient(object):
     def __init__(self, collection_name):
         self.settings = project.get_project_settings()  # get settings
-        self.MONGO_URL = self.settings.get("MONGO_URL","localhost")
+        self.MONGO_URL = self.settings.get("MONGO_URL", "localhost")
         self.client = MongoClient(
             host=self.mongo_url, tz_aware=True)
         self.db = self.client['crawl_db']
@@ -71,7 +71,6 @@ class MonogoDBHelper():
     instanceDict = {}
 
     def __init__(self, collection_name):
-        print 'MonogoDBHelper init'
         self.mongo = MongoDBClient(collection_name)
 
     @classmethod

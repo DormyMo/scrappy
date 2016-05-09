@@ -7,3 +7,4 @@ pytz
 scrapyd
 scrapyd-client
 flask
+sqlalchemy

@@ -7,6 +7,8 @@
 
 import scrapy
 
+from scrappy.model.test import Test
+
 
 class ScrappyItem(scrapy.Item):
     # define the fields for your item here like:
@@ -18,3 +20,17 @@ class ScrappyItem(scrapy.Item):
 
     def handleUpdate(self, item):
         return item
+
+
+class ModelItem(scrapy.Item):
+    model = scrapy.Field()
+
+    @classmethod
+    def getInstance(cls, model):
+        modelItem = cls()
+        modelItem['model'] = model
+        return modelItem
+
+
+if __name__ == '__main__':
+    print ModelItem.getInstance(Test())
