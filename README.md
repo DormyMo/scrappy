@@ -1,5 +1,5 @@
 # scrappy
-scrapy best practice
+scrapy best practice you don't want to miss
 ## requirements
     pip install requirements.txt
 ## structrue
